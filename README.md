@@ -1,2 +1,2 @@
 # pharmacotherapyAI
-This Project for AI/ML solution to Obesity
+This Project for battling Obesity by leveraging cutting-edge AI/ML 
