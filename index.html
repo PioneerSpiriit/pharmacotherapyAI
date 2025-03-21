@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,127 +18,218 @@
             align-items: center;
             min-height: 100vh;
         }
-        header {
-            padding: 20px;
-            margin-top: 30px;
-        }
+
         h1 {
+            margin-top: 40px;
             font-size: 2.5rem;
-            margin-bottom: 10px;
         }
+
         h2 {
-            font-size: 1.2rem;
+            margin-top: 30px;
+            font-size: 1.5rem;
             font-weight: normal;
-            margin-bottom: 30px;
         }
+
         #countdown {
             display: flex;
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
         }
+
         .time-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 10px;
-            min-width: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
         .number {
-            font-size: 2rem;
+            font-size: 3rem;
             font-weight: bold;
         }
+
         .label {
             font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-top: 5px;
             text-transform: uppercase;
+            color: #ccc;
         }
-        .links a {
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 50px 0;
+            width: 90%;
+            align-items: start;
+        }
+
+        .grid-item {
+            text-align: left;
+        }
+
+        .grid-item.center {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        a img {
+            transition: transform 0.3s ease;
+            vertical-align: middle;
+            width: 16px;
+            margin-left: 5px;
+        }
+
+        a:hover img {
+            transform: scale(1.2);
+        }
+
+        .github-logo {
+            width: 20px;
+            margin-right: 5px;
+        }
+
+        .github-text-link, .mentor-link {
             color: #fff;
-            text-decoration: underline;
-            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
-        footer {
-            margin-top: auto;
-            padding: 20px;
-            font-size: 0.8rem;
+
+        .github-text-link:hover, .mentor-link:hover {
+            color: #ddd;
         }
+
     </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Team-Pioneer @ IIT Kanpur</h1>
-        <h2>Countdown to our Pitch at the 2025 Global Summit 🚀</h2>
-    </header>
+    <h1>Team-Pioneer @ IIT Kanpur</h1>
+    <h2 id="message">Countdown to our Pitch at the 2025 Global Summit 🚀</h2>
 
     <div id="countdown">
         <div class="time-box">
             <div class="number" id="days">00</div>
-            <div class="label">Days</div>
+            <div class="label">DAYS</div>
         </div>
         <div class="time-box">
             <div class="number" id="hours">00</div>
-            <div class="label">Hours</div>
+            <div class="label">HOURS</div>
         </div>
         <div class="time-box">
             <div class="number" id="minutes">00</div>
-            <div class="label">Minutes</div>
+            <div class="label">MINUTES</div>
         </div>
         <div class="time-box">
             <div class="number" id="seconds">00</div>
-            <div class="label">Seconds</div>
+            <div class="label">SECONDS</div>
         </div>
     </div>
 
-    <div class="links">
-        <a href="https://github.com/PioneerSpirit/pharmacotherapyAI/tree/main" target="_blank">GitHub Repo</a>
+    <div class="grid">
+        <!-- Mentors -->
+        <div class="grid-item">
+            <h3>Project Mentors</h3>
+            <p>
+                <a href="https://home.iitk.ac.in/~ketan/" class="mentor-link" target="_blank">
+                    Prof. Ketan Rajawat (Electrical Engineering, IIT-K)
+                    <img src="https://www.iitk.ac.in/new/images/page-images/logo/bluelog.jpg" alt="IITK">
+                </a>
+            </p>
+            <p>
+                <a href="https://www.iitk.ac.in/bsbe/index.php/sai-prasad-pydi" class="mentor-link" target="_blank">
+                    Prof. Sai Prasad Pydi (Biological Sciences & Bioengineering, IIT-K)
+                    <img src="https://www.iitk.ac.in/new/images/page-images/logo/bluelog.jpg" alt="IITK">
+                </a>
+            </p>
+        </div>
+
+        <!-- GitHub Hub -->
+        <div class="grid-item center">
+            <h3>Project Hub</h3>
+            <p>
+                <a href="https://github.com/PioneerSpirit/pharmacotherapyAI" class="github-text-link" target="_blank">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="github-logo" alt="GitHub"> Visit GitHub Repository
+                </a>
+            </p>
+        </div>
+
+        <!-- Team -->
+        <div class="grid-item">
+            <h3>Meet the Team</h3>
+            <p>Akshay Kakar
+                <a href="https://www.linkedin.com/in/akakar/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+            </p>
+            <p>Lokesh Kumar
+                <a href="https://www.linkedin.com/in/lokesh-kumar-2556b02b/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+            </p>
+            <p>Vasudev Gupta
+                <a href="https://www.linkedin.com/in/guptavasudev/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+            </p>
+            <p>Sujoy Kansabanik
+                <a href="https://www.linkedin.com/in/sujoy-kansabanik-82679b10b/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+            </p>
+            <p>Indradeep Chatterjee
+                <a href="#" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+            </p>
+            <p>Neeraj Joshi
+                <a href="#" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+            </p>
+        </div>
     </div>
 
-    <footer>
-        <div id="contact">
-            <p>Team-Pioneer | Department of Biological Sciences & Electrical Engineering</p>
-            <p>Contact: yourname (AT) iitk (.) ac (.) in</p>
-            <p>Office: IIT Kanpur Campus, ACES Building</p>
-        </div>
-    </footer>
+    <script>
+        const pitchStart = new Date("2025-04-06T00:00:00-05:00");
+        const pitchEnd = new Date("2025-04-08T23:59:59-05:00");
 
-   <script>
-    // Chicago official timezone: America/Chicago (UTC-5 in April)
-    const pitchStart = new Date("2025-04-06T00:00:00-05:00"); // April 6, 2025, CDT
-    const pitchEnd = new Date("2025-04-08T23:59:59-05:00"); // April 8, 2025, CDT
+        function updateCountdown() {
+            const now = new Date();
+            let message = "";
+            let gap;
 
-    function updateCountdown() {
-        const now = new Date();
+            if (now < pitchStart) {
+                gap = pitchStart - now;
+                message = "Countdown to our Pitch at the 2025 Global Summit 🚀";
+            } else if (now >= pitchStart && now <= pitchEnd) {
+                message = "Pitch is ongoing! 🚀";
+                document.getElementById("countdown").innerHTML = `<h2>${message}</h2>`;
+                return;
+            } else {
+                message = "Pitch has ended! 🎉";
+                document.getElementById("countdown").innerHTML = `<h2>${message}</h2>`;
+                return;
+            }
 
-        let message = "";
-        let gap;
+            const d = Math.floor(gap / (1000 * 60 * 60 * 24));
+            const h = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((gap % (1000 * 60)) / 1000);
 
-        if (now < pitchStart) {
-            gap = pitchStart - now;
-            message = "Pitch starts in:";
-        } else if (now >= pitchStart && now <= pitchEnd) {
-            message = "Pitch is ongoing!";
-            document.getElementById("countdown").innerHTML = `<h2>${message}</h2>`;
-            return;
-        } else {
-            message = "Pitch has ended!";
-            document.getElementById("countdown").innerHTML = `<h2>${message}</h2>`;
-            return;
+            document.getElementById("message").innerText = message;
+            document.getElementById('days').innerText = String(d).padStart(2, '0');
+            document.getElementById('hours').innerText = String(h).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(m).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(s).padStart(2, '0');
         }
 
-        const d = Math.floor(gap / (1000 * 60 * 60 * 24));
-        const h = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const m = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
-        const s = Math.floor((gap % (1000 * 60)) / 1000);
-
-        document.getElementById("message").innerText = message;
-        document.getElementById('days').innerText = String(d).padStart(2, '0');
-        document.getElementById('hours').innerText = String(h).padStart(2, '0');
-        document.getElementById('minutes').innerText = String(m).padStart(2, '0');
-        document.getElementById('seconds').innerText = String(s).padStart(2, '0');
-    }
-
-    const interval = setInterval(updateCountdown, 1000);
-</script>
-
+        const interval = setInterval(updateCountdown, 1000);
+    </script>
 
 </body>
+
 </html>
